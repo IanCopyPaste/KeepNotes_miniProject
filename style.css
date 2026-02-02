@@ -1,0 +1,245 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 239, 224);
+    overflow-wrap: break-word;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    background-color:
+        peachpuff;
+    color: rgb(101, 101, 255);
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+    gap: 5px;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 0px 0px 10px 1px grey;
+}
+
+nav img {
+    width: 100px;
+    height: 100px;
+}
+
+main .txtMessage-container {
+    margin: 50px auto;
+    width: 50%;
+    max-width: 800px;
+    height: 45vh;
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px grey;
+    padding: 20px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    /* important */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txtMessage-container textarea {
+    display: block;
+    height: 90%;
+    width: 100%;
+    /* fill parent */
+    max-width: 100%;
+    /* never overflow parent */
+    box-sizing: border-box;
+    resize: none;
+    border: none;
+    margin-bottom: 50px;
+    font-size: clamp(0.85rem, 1.1em, 1.1rem);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
+.txtMessage-container textarea:focus {
+    outline: none;
+}
+
+main .btn-container {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: end;
+}
+
+main .btnAction {
+    padding: 5px 25px;
+    border: none;
+    color: white;
+    font-size: clamp(0.85rem, 0.9em, 1.1rem);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+    cursor: pointer;
+}
+
+main .btnAction:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px 0.1px black;
+}
+
+main #btnClear {
+    background-color: red;
+}
+
+main #btnSave {
+    background-color: green;
+}
+
+main .notes-container {
+    margin: auto;
+    width: 95%;
+    background-color: peachpuff;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.note {
+    margin: 5px;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    box-shadow: 3px 3px 5px 0.2px grey;
+    border-radius: 5px;
+}
+
+.note .mainNote-container {
+    width: 100%;
+    margin: auto;
+    height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    font-size: clamp(0.85rem, 1.1em, 1.1rem);
+}
+
+.note button {
+    align-self: self-end;
+    margin: 15px 0px 5px 0px;
+    width: 100px;
+    padding: 5px 25px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: clamp(0.85rem, 0.9em, 1.1rem);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+}
+
+.note button:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 5px 0.1px black;
+}
+
+@media(max-width: 750px) {
+    nav {
+        justify-content: center;
+    }
+    main .notes-container {
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+}
+
+@media(max-width: 600px) {
+    body {
+        font-size: 3vw;
+    }
+
+    nav {
+        gap: 0px;
+        padding: 0px;
+        justify-content: center;
+    }
+
+    main .txtMessage-container {
+        width: 80%;
+    }
+
+    main .notes-container {
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+}
+
+@media(max-width: 500px) {
+    .note {
+        width: 90%;
+    }
+}
+
+@media(max-width: 350px) {
+    body {
+        font-size: 0.5em;
+    }
+
+    nav {
+        padding: 0px;
+        justify-content: center;
+    }
+
+    nav img {
+        width: 70px;
+        height: 70px;
+    }
+    main .txtMessage-container{
+        margin: 0px;
+    }
+    main .btn-container {
+        justify-content: center;
+    }
+    
+    .btn-container {
+        flex-direction: column;
+    }
+    .note button{
+        width: 100%;
+    }
+}
+
+@media(max-width: 250px) {
+    .txtMessage-container textarea {
+        margin: 5px auto;
+    }
+
+    body {
+        font-size: 0.4em;
+    }
+
+    nav {
+        padding: 0px;
+        justify-content: center;
+    }
+
+    nav img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btnAction {
+        width: 100%;
+    }
+}
